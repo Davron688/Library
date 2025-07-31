@@ -45,4 +45,12 @@
         </div>
         <button type="submit" class="btn btn-primary mt-3">Save</button>
     </form>
+    <label for="">Category</label>
+    <select name="category_id" id="">
+        @foreach($categories as $category)
+            <option value="{{$category->id}}">{{$category->name}}</option>
+        @endforeach
+    </select>
+    <input type="submit" class="btn btn-primary" value="Save">
+    </form>
 @endsection

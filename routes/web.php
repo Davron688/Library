@@ -5,10 +5,12 @@ use App\Http\Controllers\BookListController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
-
+use App\Http\Controllers\WriterController;
+use App\Http\Controllers\LibraryController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/books',[BookController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

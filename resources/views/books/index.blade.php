@@ -1,7 +1,30 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Книги</title>
+    <style>
+        .book-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .book {
+            text-align: center;
+        }
+        .book img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">Галерея книг</h1>
 
-@section('content')
-    <h1>Book List</h1>
+<div class="book-gallery">
+
 
 
     <table class="table">
