@@ -3,6 +3,7 @@
 @section('content')
     <h1>Book List</h1>
 
+
     <table class="table">
         <thead>
         <tr>
@@ -26,6 +27,7 @@
                 <td>{{ $book->description }}</td>
                 <td>{{ $book->copies_total }}</td>
                 <td>
+
             <a href="{{ route('books.edit',$book) }}" class="btn btn-warning btn-sm">Edit</a>
                     <form action="{{ route ('books.destroy', $book) }}" method="POST" style="display: inline-block;">
                         @csrf

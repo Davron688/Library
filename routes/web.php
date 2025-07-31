@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EntranceController;
+use App\Http\Controllers\BookListController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
@@ -19,5 +21,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('books', BookController::class);
-
+Route::resource('bookslist', BookListController::class);
+Route::resource('entrances', EntranceController::class);
 
