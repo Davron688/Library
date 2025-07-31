@@ -971,8 +971,7 @@
 
                     <!-- End Collapse -->
 
-                    <span class="dropdown-header mt-4">Pages</span>
-                    <small class="bi-three-dots nav-subtitle-replacer"></small>
+
 
                     <!-- Collapse -->
                     <div class="navbar-nav nav-compact">
@@ -983,13 +982,26 @@
                         <div class="nav-item">
                             <a class="nav-link dropdown-toggle " href="{{asset('#navbarVerticalMenuPagesUsersMenu')}}" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuPagesUsersMenu" aria-expanded="false" aria-controls="navbarVerticalMenuPagesUsersMenu">
                                 <i class="bi-people nav-icon"></i>
+                                <span class="nav-link-title">BookList</span>
+                            </a>
+
+                            <div id="navbarVerticalMenuPagesUsersMenu" class="nav-collapse collapse " data-bs-parent="#navbarVerticalMenuPagesMenu">
+                                <a class="nav-link " href="{{asset('bookslist')}}">Book List</a>
+                                <a class="nav-link " href="{{asset('bookslist/create')}}">Create Book List</a>
+                            </div>
+<br>
+                        </div>
+                        <div class="nav-item">
+                            <a class="nav-link dropdown-toggle " href="{{asset('#navbarVerticalMenuPagesUsersMenu')}}" role="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalMenuPagesUsersMenu" aria-expanded="false" aria-controls="navbarVerticalMenuPagesUsersMenu">
+                                <i class="bi-people nav-icon"></i>
                                 <span class="nav-link-title">Users</span>
                             </a>
 
                             <div id="navbarVerticalMenuPagesUsersMenu" class="nav-collapse collapse " data-bs-parent="#navbarVerticalMenuPagesMenu">
-                                <a class="nav-link " href="{{asset('layouts1.app')}}">List book</a>
-                                <a class="nav-link " href="{{asset('books.create')}}">Create book</a>
+                                <a class="nav-link " href="{{asset('entrances')}}">Users</a>
+                                <a class="nav-link " href="{{asset('entrances/create')}}">Create Users</a>
                             </div>
+
                         </div>
                         <!-- End Collapse -->
 
@@ -1100,9 +1112,6 @@
                                 <li class="navbar-vertical-footer-list-item">
                                     <!-- Language -->
                                     <div class="dropdown dropup">
-                                        <button type="button" class="btn btn-ghost-secondary btn-icon rounded-circle" id="selectLanguageDropdown" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation="">
-                                            <img class="avatar avatar-xss avatar-circle" src="{{asset('assets/vendor/flag-icon-css/flags/1x1/us.svg')}}" alt="United States Flag">
-                                        </button>
 
                                         <div class="dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="selectLanguageDropdown">
                                             <span class="dropdown-header">Select language</span>
@@ -1140,6 +1149,9 @@
                         <!-- End Footer -->
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 </aside>
 
 <!-- End Navbar Vertical -->
@@ -1148,18 +1160,9 @@
     <!-- Content -->
     <div class="content container-fluid">
         <!-- Page Header -->
-        <div class="page-header">
-            <div class="row align-items-center">
-                <div class="col">
-                    <h1 class="page-header-title">@yield('yield')</h1>
-                </div>
+
                 <!-- End Col -->
 
-                <div class="col-auto">
-                    <a class="btn btn-primary" href="{{route('name.create')}}" >
-                        <i class="bi-person-plus-fill me-1"></i> Add New User
-                    </a>
-                </div>
                 <!-- End Col -->
             </div>
         </div>
@@ -1379,11 +1382,7 @@
 <!-- End Builder -->
 
 <!-- Builder Toggle -->
-<div id="builderOffcanvas" class="position-fixed bottom-0 end-0 me-5 mb-5" style="z-index: 3;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBuilder" aria-controls="offcanvasBuilder">
-    <a class="btn btn-dark btn-lg" href="{{asset('javascript:;')}}">
-        <i class="bi-sliders fs-6 me-2"></i> Customize
-    </a>
-</div>
+
 <!-- End Builder Toggle -->
 
 <div class="d-none js-build-layouts">
@@ -1917,13 +1916,7 @@
                                 <!-- End Apps -->
                             </li>
 
-                            <li class="nav-item d-none d-sm-inline-block">
-                                <!-- Activity -->
-                                <button class="btn btn-ghost-secondary btn-icon rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasActivityStream" aria-controls="offcanvasActivityStream">
-                                    <i class="bi-x-diamond"></i>
-                                </button>
-                                <!-- Activity -->
-                            </li>
+
 
                             <li class="nav-item">
                                 <!-- Style Switcher -->
@@ -2429,31 +2422,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-
-                                                <a class="dropdown-item" href="{{asset('index.html')}}">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-shrink-0">
-                                                            <img class="avatar avatar-xs avatar-circle" src="{{asset('assets/img/160x160/img3.jpg')}}" alt="Image Description">
-                                                        </div>
-                                                        <div class="flex-grow-1 text-truncate ms-2">
-                                                            <span>David Harrison</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-
-                                                <a class="dropdown-item" href="{{asset('index.html')}}">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="flex-shrink-0">
-                                                            <div class="avatar avatar-xs avatar-soft-info avatar-circle">
-                                                                <span class="avatar-initials">A</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex-grow-1 text-truncate ms-2">
-                                                            <span>Anne Richard</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
+                                                <!-- Body -->
                                             <!-- End Body -->
 
                                             <!-- Footer -->
@@ -2484,39 +2453,6 @@
                                             <span class="btn-status btn-sm-status btn-status-danger"></span>
                                         </button>
 
-                                        <div class="dropdown-menu dropdown-menu-end dropdown-card navbar-dropdown-menu navbar-dropdown-menu-borderless" aria-labelledby="navbarNotificationsDropdown" style="width: 25rem;">
-                                            <div class="card">
-                                                <!-- Header -->
-                                                <div class="card-header card-header-content-between">
-                                                    <h4 class="card-title mb-0">Notifications</h4>
-
-                                                    <!-- Unfold -->
-                                                    <div class="dropdown">
-                                                        <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" id="navbarNotificationsDropdownSettings" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="bi-three-dots-vertical"></i>
-                                                        </button>
-
-                                                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown-menu-borderless" aria-labelledby="navbarNotificationsDropdownSettings">
-                                                            <span class="dropdown-header">Settings</span>
-                                                            <a class="dropdown-item" href="{{asset('#')}}">
-                                                                <i class="bi-archive dropdown-item-icon"></i> Archive all
-                                                            </a>
-                                                            <a class="dropdown-item" href="{{asset('#')}}">
-                                                                <i class="bi-check2-all dropdown-item-icon"></i> Mark all as read
-                                                            </a>
-                                                            <a class="dropdown-item" href="{{asset('#')}}">
-                                                                <i class="bi-toggle-off dropdown-item-icon"></i> Disable notifications
-                                                            </a>
-                                                            <a class="dropdown-item" href="{{asset('#')}}">
-                                                                <i class="bi-gift dropdown-item-icon"></i> What's new?
-                                                            </a>
-                                                            <div class="dropdown-divider"></div>
-                                                            <span class="dropdown-header">Feedback</span>
-                                                            <a class="dropdown-item" href="{{asset('#')}}">
-                                                                <i class="bi-chat-left-dots dropdown-item-icon"></i> Report
-                                                            </a>
-                                                        </div>
-                                                    </div>
                                                     <!-- End Unfold -->
                                                 </div>
                                                 <!-- End Header -->
@@ -2878,6 +2814,8 @@
                                                     View all notifications <i class="bi-chevron-right"></i>
                                                 </a>
                                                 <!-- End Card Footer -->
+                                </li>
+                            </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -2988,13 +2926,6 @@
                                     <!-- End Apps -->
                                 </li>
 
-                                <li class="nav-item d-none d-sm-inline-block">
-                                    <!-- Activity -->
-                                    <button class="btn btn-ghost-light btn-icon rounded-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasActivityStream" aria-controls="offcanvasActivityStream">
-                                        <i class="bi-x-diamond"></i>
-                                    </button>
-                                    <!-- Activity -->
-                                </li>
 
                                 <li class="nav-item">
                                     <!-- Style Switcher -->
@@ -3136,7 +3067,10 @@
                         </div>
                         <!-- End Content End -->
                     </div>
+        </header>
                 </div>
+</div>
+</body>
             </div>
 
             <div class="container">
